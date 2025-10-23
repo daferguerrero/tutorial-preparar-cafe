@@ -1,0 +1,129 @@
+/* Styles para el mini tutorial: diseño responsivo y limpio */
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --accent: #6b4eff;
+  --gris10: #1b1b1f;
+  --gris20: #666978;
+  --max-width: 980px;
+  --radius: 12px;
+  --container-padding: 1rem;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:linear-gradient(180deg, #fafafa 0%, var(--bg) 100%);
+  color:#222;
+  line-height:1.45;
+}
+.container{
+  width:calc(100% - 2rem);
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:var(--container-padding);
+}
+
+.site-header{
+  background:linear-gradient(90deg, rgba(107,78,255,0.12), rgba(107,78,255,0.06));
+  padding:2rem 0 1.25rem;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.site-title{
+  margin:0 0 0.25rem;
+  font-size:clamp(1.5rem, 3.5vw, 2.25rem);
+  color:var(--accent);
+  letter-spacing: -0.5px;
+}
+.subtitle{
+  margin:0;
+  color:var(--gris20);
+}
+
+.t-contents{
+  margin-top:1rem;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 20px rgba(24,24,24,0.04);
+  padding:1rem;
+}
+.t-contents h2{margin:0 0 0.5rem}
+.t-contents ol{
+  margin:0;
+  padding-left:1.1rem;
+  list-style-type: none;
+}
+.t-contents a{
+  color:var(--accent);
+  text-decoration:none;
+}
+.t-contents a:hover{ text-decoration:underline }
+
+main{margin:1.25rem 0 2rem}
+.tutorial-section{
+  background:var(--card);
+  border-radius:10px;
+  padding:1rem;
+  margin-bottom:1rem;
+  box-shadow:0 6px 18px rgba(0,0,0,0.03);
+}
+.tutorial-section h3{margin:0 0 0.5rem;color:var(--gris10)}
+.section-content{
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:1rem;
+  align-items:center;
+}
+.section-content img{
+  width:100%;
+  height:110px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+.tips{margin-top:0.25rem;color:var(--gris20);font-size:0.95rem}
+
+.site-footer{
+  border-top:1px solid rgba(0,0,0,0.04);
+  background:transparent;
+  padding:1rem 0 2rem;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-footer p{margin:0;color:var(--gris20);font-size:0.95rem}
+.site-footer a{color:var(--accent);text-decoration:none}
+
+/* Adaptaciones responsive */
+@media (max-width:700px){
+  .section-content{grid-template-columns:1fr;}
+  .section-content img{height:180px}
+  .t-contents{padding:0.75rem}
+}
+
+@media (max-width:420px){
+  .site-title{font-size:1.5rem}
+  .container{width:calc(100% - 1rem)}
+  .section-content img{height:150px}
+}
+
+/* Responsive: apilar en móviles */
+@media (max-width:420px) {
+  .site-footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Pequeños toques de accesibilidad */
+a:focus{outline:3px solid rgba(107,78,255,0.18);outline-offset:2px}

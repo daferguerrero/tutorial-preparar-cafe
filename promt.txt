@@ -1,0 +1,18 @@
+Genera el código completo en HTML y CSS para crear una página web que cumpla con lo siguiente:
+
+1. La página debe enseñar un pequeño tutorial sobre un tema libre (por ejemplo: "Cómo preparar café").
+2. Incluye:
+   - Un título principal para la página.
+   - Una lista ordenada que muestre los distintos conceptos del tutorial. Cada elemento de la lista debe ser un enlace que lleve a la sección correspondiente del tema.
+3. Cada sección del tutorial debe contener:
+   - Un título del tema.
+   - Una imagen relacionada.
+   - Una breve descripción del concepto.
+4. Aplica los principales componentes de HTML (estructura semántica: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).
+5. Usa CSS para:
+   - Dar estilo al título principal.
+   - Estilizar la lista ordenada y los enlaces.
+   - Alinear las imágenes y el texto de forma agradable.
+   - Aplicar colores y tipografía para que la página sea visualmente atractiva.
+6. El diseño debe ser responsivo (adaptarse a pantallas pequeñas).
+Entrega el código en dos archivos: `index.html` y `styles.css`.
